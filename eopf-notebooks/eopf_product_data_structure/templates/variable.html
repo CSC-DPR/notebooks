@@ -1,5 +1,6 @@
-<li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_{{ group.name }}_{{ variable.name }}">
-    <span class="text-secondary">{{ variable.name }}</span>
+<li class="item" id="groups_node_{{ group.name }}_{{ variable.name }}">
+    <input type="checkbox" name="groups_node_{{ group.name }}_{{ variable.name }}">
+    <label for="groups_node_{{ group.name }}_{{ variable.name }}" >{{ variable.name }}</label>
     {% with attrs=variable.attrs, container=False %}
         {% include "attrs.html" %}
     {% endwith %}

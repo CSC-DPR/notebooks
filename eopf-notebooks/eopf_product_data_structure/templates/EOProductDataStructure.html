@@ -4,82 +4,99 @@
 <head>
     <meta charset="utf-8">
     <title>Sentinel Product Data Structures and Formatting</title>
-    <!-- 2 load the theme CSS file -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
-
 </head>
 
 <body>
-    <!-- 3 setup a container element -->
-    <div class="d-flex flex-column d-flex align-items-left">
-        <!-- <div class="mt-2 p-2 border border-white rounded bg-secondary text-white">
-            <h2>
-                {{ product.name }}
-            </h2>
-        </div> -->
+    <ul class="tree-list">
+        <li class="item">
+            <input type="checkbox" name="{{ product.name }}">
+            <label for="{{ product.name }}">{{ product.name }}</label>
 
-        <div class="product_frame p-2" id="jstree">
-            <!-- in this example the tree is populated from inline HTML -->
-            <ul>
-                <li data-jstree='{"icon":"bi bi-diagram-3-fill","opened":true}'>
-                    <span class="text-uppercase text-primary fw-bold">{{ product.name }}</span>
-                    <ul>
-                        {% with attrs=product.attrs, container=True %}
-                            {% include "attrs.html" %}
-                        {% endwith %}
-                    </ul>
-                    <ul>
-                        {% for group in product %}
-                            {% with group=group, icon="bi-diagram-2-fill" %}
-                                {% include "group.html" %}
-                            {% endwith %}
-                        {% endfor %}
-                        {% with group=product.coords, icon="bi-geo-alt" %}
-                            {% include "group.html" %}
-                        {% endwith %}
-                    </ul>
-                    {% if product.metadata %}
-                        {% with metadata=product.metadata %}
+            <ul class="item-list">
+                {% with attrs=product.attrs, container=True %}
+                    {% include "attrs.html" %}
+                {% endwith %}
+                {% for group in product %}
+                    {% with group=group, class_name="" %}
+                        {% include "group.html" %}
+                    {% endwith %}
+                {% endfor %}
+                {% with group=product.coords, class_name="coords" %}
+                    {% include "group.html" %}
+                {% endwith %}
+                <li class="item">
+                    <span>Metadata</span>
+                    {% for metadata in product.metadas %}
+                        {% with metadata=product.metadatas %}
                             {% include "metadata.html" %}
                         {% endwith %}
-                    {% endif %}
+                    {% endfor %}
                 </li>
-
             </ul>
-        </div>
+        </li>
+    </ul>
 
+    <style type="text/css">
+        body {
+            background-color: #DDD;
+        }
+        body > ul {
+        border-left: 5px solid #DDD;
+        }
 
-    </div>
+        ul.tree-list {
+            font-family: "Roboto", sans-serif;
+        }
+        ul.tree-list li {
+            list-style: none;
+            padding: 0.2em 0;
+        }
+        ul.tree-list li label {
+            display: inline-block;
+            margin-left: 0.5em;
+            padding: 0.2em 0.3em;
+            border-radius: 0.2em;
+        }
+        ul.tree-list li > ul {
+            padding-left: 1.2em;
+            position: relative;
+        }
+        ul.tree-list li > ul > li {
+            display: none;
+        }
+        ul.tree-list li > ul::before {
+            content: "\e48c";
+            font-family: "Helvetica";
+            visibility: visible;
+            font-size: 14px;
+            position: absolute;
+            left: -0.5em;
+            top: -1.45em;
+            transition: transform 0.3s;
+        }
+        ul.tree-list li > ul.attrs::before {
+            content: "\e476";
+        }
+        ul.tree-list li > ul.coords::before {
+            content: "\e136";
+        }
+        ul.tree-list li input {
+            width: 100%;
+            position: absolute;
+            cursor: pointer;
+            margin-top: 0.5em;
+            opacity: 0;
+        }
+        ul.tree-list li input:hover + label {
+            background-color: #EEE;
+        }
+        ul.tree-list li input:checked ~ ul > li {
+            display: block;
+        }
 
-    <!-- 4 include the jQuery library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
-    <!-- 5 include the minified jstree source -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <script>
-        $(function () {
-            // 6 create an instance when the DOM is ready
-            $('#jstree').jstree();
-            // 7 bind to events triggered on the tree
-            $('#jstree').on("changed.jstree", function (e, data) {
-                console.log(data.selected);
-            });
-            // 8 interact with the tree - either way is OK
-            // $('button').on('click', function () 
-            // {
-            //   $('#jstree').jstree(true).select_node('groups_node');
-            //   $('#jstree').jstree('select_node', 'groups_node');
-            //   $.jstree.reference('#jstree').select_node('groups_node');
-            // });
-        });
-    </script>
+        /*# sourceMappingURL=style.css.map */
+    </style>
 </body>
+
 
 </html>

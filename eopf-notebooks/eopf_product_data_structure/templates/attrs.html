@@ -1,17 +1,19 @@
-{% if container %}
-<li data-jstree='{"icon":"bi bi-info-square"}'>
-    <span class="text-capitalize text-secondary fw-bold">attributes</span>
-{% endif %}
-    <ul>
-        {% for name, value in attrs.items() %}
-            <li data-jstree='{"icon":"bi bi-info"}'>
-                
-                <span class="text-secondary">{{ name }} : </span>
-                <span class="m-5 text-muted">{{ value }}</span>
-            </li>
-        
-        {% endfor %}
-    </ul>
-{% if container %}
-</li>
+
+{% if attrs %}
+    {% if container %}
+    <li class="item">
+        <input type="checkbox" name="attrs">
+        <label for="attrs" style="font-weight: bolder;">Attributes</label>
+    {% endif %}
+        <ul class="item-list attrs">
+            {% for name, value in attrs.items() %}
+                <li class="item">
+                    <span>{{ name }} : </span>
+                    <span style="color: #555;">{{ value }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+        {% if container %}
+    </li>
+    {% endif %}    
 {% endif %}
