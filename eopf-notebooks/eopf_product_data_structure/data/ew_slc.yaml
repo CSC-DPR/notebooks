@@ -1,0 +1,369 @@
+product:
+  attributes:
+    missionId: np.string_
+    productType: np.string_
+    mode: np.string_
+    absoluteOrbitNumber: np.uint
+    missionDataTakeId: np.uint
+    pass: np.string_
+    timelinessCategory: np.string_
+    platformHeading: np.float32
+    projection: np.string_
+    rangeSamplingRate: np.float32
+    radarFrequency: np.float32
+    azimuthSteeringRate: np.float32
+  coordinates:
+    variables:
+      polarisation: F(image_idx) -> np.string_
+      swath: F(image_idx) -> np.string_
+      startTime: F(image_idx) -> np.datetime64
+      stopTime: F(image_idx) -> datetime64
+      azimuthTime: F(image_idx) -> datetime64
+  measurements:
+    variables:
+      images: F(image_idx, row, columns) -> (np.float16 | np.complex32)
+  generalQualityInformation:
+    variables:
+      productQualityIndex: F(image_idx) -> np.uint
+  downlinkQuality:
+    variables:
+      iInputDataMean: F(image_idx)
+      qInputDataMean: F(image_idx)
+      inputDataMeanOutsideNominalRangeFlag: F(image_idx) -> np.bool
+      iInputDataStdDev: F(image_idx)
+      qInputDataStdDev: F(image_idx)
+      inputDataStDevOutsideNominalRangeFlag: F(image_idx) -> np.bool
+      numDownlinkInputDataGaps: F(image_idx) -> np.uint
+      downlinkGapsInInputDataSignificantFlag: F(image_idx) -> np.bool
+      numDownlinkInputMissingLines: F(image_idx) -> np.uint
+      downlinkMissingLinesSignificantFlag: F(image_idx) -> np.bool
+      numInstrumentInputDataGaps: F(image_idx) -> np.uint
+      instrumentGapsInInputDataSignificantFlag: F(image_idx)
+      numInstrumentInputMissingLines: F(image_idx) -> np.uint
+      instrumentMissingLinesSignificantFlag: F(image_idx) -> np.bool
+      numSsbErrorInputDataGaps: F(image_idx) -> np.uint
+      ssbErrorGapsInInputDataSignificantFlag: F(image_idx) -> np.bool
+      numSsbErrorInputMissingLines: F(image_idx) -> np.uint
+      ssbErrorMissingLinesSignificantFlag: F(image_idx) -> np.bool
+      chirpSourceUsed: F(image_idx) -> str
+      pgSourceUsed: F(image_idx) -> str
+      rrfSpectrumUsed: F(image_idx) -> str
+      replicaReconstructionFailedFlag: F(image_idx) -> np.bool
+      meanPgProductAmplitude: F(image_idx)
+      stdDevPgProductAmplitude: F(image_idx)
+      meanPgProductPhase: F(image_idx)
+      stdDevPgProductPhase: F(image_idx)
+      pgProductDerivationFailedFlag: F(image_idx) -> np.bool
+      invalidDownlinkParamsFlag: F(image_idx) -> np.bool
+  rawDataAnalysisQuality:
+    variables:
+      iBias: F(image_idx)
+      iBiasSignificanceFlag: F(image_idx) -> np.bool
+      qBias: F(image_idx)
+      qBiasSignificanceFlag: F(image_idx) -> np.bool
+      iqGainImbalance: F(image_idx)
+      iqGainSignificanceFlag: F(image_idx) -> np.bool
+      iqQuadratureDeparture: F(image_idx)
+      iqQuadratureDepartureSignificanceFlag: F(image_idx) -> np.bool
+  dopplerCentroidQuality:
+    variables:
+      dcMethod: F(image_idx) -> str
+      dopplerCentroidUncertainFlag: F(image_idx) -> np.bool
+  imageQuality:
+    variables:
+      outputDataMean: F(image_idx)
+      outputDataStdDev: F(image_idx)
+      outputDataMeanOutsideNominalRangeFlag: F(image_idx) -> np.bool
+      outputDataStDevOutsideNominalRangeFlag: F(image_idx) -> np.bool
+  downlinkInformation:
+    variables:
+      firstLineSensingTime: F(image_idx, downlinkInformation_idx) -> np.datetime64
+      lastLineSensingTime: F(image_idx, downlinkInformation_idx) -> np.datetime64
+      prf: F(image_idx, downlinkInformation_idx) ->  -> np.bool
+      bitErrorCount_numErrSyncMarker: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrDataTakeId: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrEccNumber: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrTestMode: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrRxChannelId: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrInstrumentConfigId: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrPacketCount: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrPriCount: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrSsbErrorFlag: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrBaqMode: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrBaqBlockLength: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrRangeDecimation: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrRxGain: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrTxRampRate: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrTxPulseStartFrequency: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrRank: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrPri: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrSwst: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrSwl: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrPolarisation: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrTempComp: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrElevationBeamAddress: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrAzimuthBeamAddress: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrSasTestMode: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrCalType: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrCalibrationBeamAddress: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrCalMode: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrTxPulseNumber: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrSignalType: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrSwapFlag: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrSwathNumber: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numErrNumberOfQuads: F(image_idx, downlinkInformation_idx)
+      bitErrorCount_numIspHeaderErrors: F(image_idx, downlinkInformation_idx)
+      downlinkValues_pri: F(image_idx, downlinkInformation_idx)
+      downlinkValues_rank: F(image_idx, downlinkInformation_idx)
+      downlinkValues_eccNumber: F(image_idx, downlinkInformation_idx)
+      downlinkValues_rxChannelId: F(image_idx, downlinkInformation_idx)
+      downlinkValues_instrumentConfigId: F(image_idx, downlinkInformation_idx)
+      downlinkValues_dataFormat_baqBlockLength: F(image_idx, downlinkInformation_idx)
+      downlinkValues_dataFormat_echoFormat: F(image_idx, downlinkInformation_idx)
+      downlinkValues_dataFormat_noiseFormat: F(image_idx, downlinkInformation_idx)
+      downlinkValues_dataFormat_calibrationFormat: F(image_idx, downlinkInformation_idx)
+      downlinkValues_dataFormat_meanBitRate: F(image_idx, downlinkInformation_idx)
+      downlinkValues_rangeDecimation_decimationFilterBandwidth: F(image_idx, downlinkInformation_idx)
+      downlinkValues_rangeDecimation_samplingFrequencyAfterDecimation: F(image_idx, downlinkInformation_idx)
+      downlinkValues_rangeDecimation_filterLength: F(image_idx, downlinkInformation_idx)
+      downlinkValues_rxGain: F(image_idx, downlinkInformation_idx)
+      downlinkValues_txPulseLength: F(image_idx, downlinkInformation_idx)
+      downlinkValues_txPulseStartFrequency: F(image_idx, downlinkInformation_idx)
+      downlinkValues_txPulseRampRate: F(image_idx, downlinkInformation_idx)
+      downlinkValues_swathNumber: F(image_idx, downlinkInformation_idx)
+      downlinkValues_swl_azimuthTime: F(image_idx, downlinkInformation_idx, swl_idx)
+      downlinkValues_swl_value: F(image_idx, downlinkInformation_idx, swl_idx)
+      downlinkValues_pointingStatus_azimuthTime: F(image_idx, downlinkInformation_idx, pointingStatus_idx)
+      downlinkValues_pointingStatus_aocsOpMode: F(image_idx, downlinkInformation_idx, pointingStatus_idx)
+      downlinkValues_pointingStatus_rollErrorFlag: F(image_idx, downlinkInformation_idx, pointingStatus_idx)
+      downlinkValues_pointingStatus_pitchErrorFlag: F(image_idx, downlinkInformation_idx, pointingStatus_idx)
+      downlinkValues_pointingStatus_yawErrorFlag: F(image_idx, downlinkInformation_idx, pointingStatus_idx)
+  orbit:
+    attributes:
+      frame: Earth Fixed
+    variables:
+      time: F(image_idx, orbit_idx)
+      x: F(image_idx, orbit_idx)
+      y: F(image_idx, orbit_idx)
+      z: F(image_idx, orbit_idx)
+      vx: F(image_idx, orbit_idx)
+      vy: F(image_idx, orbit_idx)
+      vz: F(image_idx, orbit_idx)
+  attitude:
+    attributes:
+      frame: GM2000
+    variables:
+      time: F(image_idx, attitude_idx)
+      q0: F(image_idx, attitude_idx)
+      q1: F(image_idx, attitude_idx)
+      q2: F(image_idx, attitude_idx)
+      q3: F(image_idx, attitude_idx)
+      wx: F(image_idx, attitude_idx)
+      wy: F(image_idx, attitude_idx)
+      wz: F(image_idx, attitude_idx)
+      roll: F(image_idx, attitude_idx)
+      pitch: F(image_idx, attitude_idx)
+      yaw: F(image_idx, attitude_idx)
+  rawDataAnalysis:
+    variables:
+      azimuthTime: F(image_idx, rawDataAnalysis_idx)
+      iBias: F(image_idx, rawDataAnalysis_idx)
+      qBias: F(image_idx, rawDataAnalysis_idx)
+      iqQuadratureDeparture: F(image_idx, rawDataAnalysis_idx)
+      iqGainImbalance: F(image_idx, rawDataAnalysis_idx)
+      support_iBiasUpperBound: F(image_idx, rawDataAnalysis_idx)
+      support_iBiasLowerBound: F(image_idx, rawDataAnalysis_idx)
+      support_qBiasUpperBound: F(image_idx, rawDataAnalysis_idx)
+      support_qBiasLowerBound: F(image_idx, rawDataAnalysis_idx)
+      support_iqGainUpperBound: F(image_idx, rawDataAnalysis_idx)
+      support_iqGainLowerBound: F(image_idx, rawDataAnalysis_idx)
+      support_iqQuadratureDepartureUpperBound: F(image_idx, rawDataAnalysis_idx)
+      support_iqQuadratureDepartureLowerBound: F(image_idx, rawDataAnalysis_idx)
+      support_iBiasUsedForCorrection: F(image_idx, rawDataAnalysis_idx)
+      support_qBiasUsedForCorrection: F(image_idx, rawDataAnalysis_idx)
+      support_iqGainImbalanceUsedForCorrection: F(image_idx, rawDataAnalysis_idx)
+      support_iqQuadratureDepartureUsedForCorrection: F(image_idx, rawDataAnalysis_idx)
+  replicaInformation:
+    variables:
+      referenceReplica_azimuthTime: F(image_idx, replicaInformation_idx)
+      referenceReplica_chirpSource: F(image_idx, replicaInformation_idx)
+      referenceReplica_pgSource: F(image_idx, replicaInformation_idx)
+      referenceReplica_amplitudeCoefficients: F(image_idx, replicaInformation_idx, coefficient_idx)
+      referenceReplica_phaseCoefficients: F(image_idx, replicaInformation_idx, coefficient_idx)
+      referenceReplica_timeDelay: F(image_idx, replicaInformation_idx)
+      referenceReplica_gain: F(image_idx, replicaInformation_idx)
+      replica_azimuthTime: F(image_idx, replicaInformation_idx, replica_idx)
+      replica_crossCorrelationBandwidth: F(image_idx, replicaInformation_idx, replica_idx)
+      replica_crossCorrelationPslr: F(image_idx, replicaInformation_idx, replica_idx)
+      replica_crossCorrelationIslr: F(image_idx, replicaInformation_idx, replica_idx)
+      replica_crossCorrelationPeakLocation: F(image_idx, replicaInformation_idx, replica_idx)
+      replica_reconstructedReplicaValidFlag: F(image_idx, replicaInformation_idx, replica_idx)
+      replica_pgProductAmplitude: F(image_idx, replicaInformation_idx, replica_idx)
+      replica_pgProductPhase: F(image_idx, replicaInformation_idx, replica_idx)
+      replica_modelPgProductAmplitude: F(image_idx, replicaInformation_idx, replica_idx)
+      replica_modelPgProductPhase: F(image_idx, replicaInformation_idx, replica_idx)
+      replica_relativePgProductValidFlag: F(image_idx, replicaInformation_idx, replica_idx)
+      replica_absolutePgProductValidFlag: F(image_idx, replicaInformation_idx, replica_idx)
+      replica_internalTimeDelay: F(image_idx, replicaInformation_idx, replica_idx)
+  noise:
+    variables:
+      azimuthTime: F(image_idx, noise_idx)
+      noisePowerCorrectionFactor: F(image_idx, noise_idx)
+      numberOfNoiseLines: F(image_idx, noise_idx)
+  terrainHeight:
+    variables:
+      azimuthTime: F(image_idx, terrainHeight_idx)
+      value: F(image_idx, terrainHeight_idx)
+  azimuthFmRate:
+    variables:
+      azimuthTime: F(image_idx, azimuthFmRate_idx)
+      t0: F(image_idx, azimuthFmRate_idx)
+      azimuthFmRatePolynomial: F(image_idx, azimuthFmRate_idx, coefficient_idx)
+  imageInformation:
+    variables:
+      productFirstLineUtcTime: F(image_idx)
+      productLastLineUtcTime: F(image_idx)
+      ascendingNodeTime: F(image_idx)
+      anchorTime: F(image_idx)
+      productComposition: F(image_idx)
+      slice_sensingStartTime: F(image_idx, slice_idx)
+      slice_sensingStopTime: F(image_idx, slice_idx)
+      slantRangeTime: F(image_idx)
+      pixelValue: F(image_idx)
+      outputPixels: F(image_idx)
+      rangePixelSpacing: F(image_idx)
+      azimuthPixelSpacing: F(image_idx)
+      azimuthTimeInterval: F(image_idx)
+      azimuthFrequency: F(image_idx)
+      numberOfSamples: F(image_idx)
+      numberOfLines: F(image_idx)
+      zeroDopMinusAcqTime: F(image_idx)
+      incidenceAngleMidSwath: F(image_idx)
+      outputDataMean: F(image_idx)
+      outputDataStdDev: F(image_idx)
+  processingInformation:
+    variables:
+      rawDataAnalysisUsed: F(image_idx)
+      orbitDataFileUsed: F(image_idx)
+      attitudeDataFileUsed: F(image_idx)
+      rxVariationCorrectionApplied: F(image_idx)
+      antennaElevationPatternApplied: F(image_idx)
+      antennaAzimuthPatternApplied: F(image_idx)
+      antennaAzimuthElementPatternApplied: F(image_idx)
+      dcMethod: F(image_idx)
+      dcInputData: F(image_idx)
+      rangeSpreadingLossCompensationApplied: F(image_idx)
+      srgrConversionApplied: F(image_idx)
+      detectionPerformed: F(image_idx)
+      thermalNoiseCorrectionPerformed: F(image_idx)
+      rfiMitigationPerformed: F(image_idx)
+      rfiMitigationDomain: F(image_idx)
+      chirpSource: F(image_idx)
+      pgSource: F(image_idx)
+      rrfSpectrum: F(image_idx)
+      applicationLutId: F(image_idx)
+      swathProcParams_rangeProcessing_windowType: F(image_idx, swathProcParams_idx)
+      swathProcParams_rangeProcessing_windowCoefficient: F(image_idx, swathProcParams_idx)
+      swathProcParams_rangeProcessing_totalBandwidth: F(image_idx, swathProcParams_idx)
+      swathProcParams_rangeProcessing_processingBandwidth: F(image_idx, swathProcParams_idx)
+      swathProcParams_rangeProcessing_lookBandwidth: F(image_idx, swathProcParams_idx)
+      swathProcParams_rangeProcessing_numberOfLooks: F(image_idx, swathProcParams_idx)
+      swathProcParams_rangeProcessing_lookOverlap: F(image_idx, swathProcParams_idx)
+      swathProcParams_azimuthProcessing_windowType: F(image_idx, swathProcParams_idx)
+      swathProcParams_azimuthProcessing_windowCoefficient: F(image_idx, swathProcParams_idx)
+      swathProcParams_azimuthProcessing_totalBandwidth: F(image_idx, swathProcParams_idx)
+      swathProcParams_azimuthProcessing_processingBandwidth: F(image_idx, swathProcParams_idx)
+      swathProcParams_azimuthProcessing_lookBandwidth: F(image_idx, swathProcParams_idx)
+      swathProcParams_azimuthProcessing_numberOfLooks: F(image_idx, swathProcParams_idx)
+      swathProcParams_azimuthProcessing_lookOverlap: F(image_idx, swathProcParams_idx)
+      swathProcParams_processorScalingFactor: F(image_idx, swathProcParams_idx)
+      inputDimensions_azimuthTime: F(image_idx, inputDimensions_idx)
+      inputDimensions_numberOfInputSamples: F(image_idx, inputDimensions_idx)
+      inputDimensions_numberOfInputLines: F(image_idx, inputDimensions_idx)
+      referenceRange: F(image_idx)
+      ellipsoidName: F(image_idx)
+      ellipsoidSemiMajorAxis: F(image_idx)
+      ellipsoidSemiMinorAxis: F(image_idx)
+      bistaticDelayCorrectionApplied: F(image_idx)
+      topsFilterConvention: F(image_idx)
+      orbitSource: F(image_idx)
+      attitudeSource: F(image_idx)
+  dopplerCentroid:
+    variables:
+      dcEstimate_azimuthTime: F(image_idx, dcEstimate_idx)
+      dcEstimate_t0: F(image_idx, dcEstimate_idx)
+      dcEstimate_geometryDcPolynomial: F(image_idx, dcEstimate_idx, coefficient_idx)
+      dcEstimate_dataDcPolynomial: F(image_idx, dcEstimate_idx, coefficient_idx)
+      dcEstimate_dataDcRmsError: F(image_idx, dcEstimate_idx)
+      dcEstimate_dataDcRmsErrorAboveThreshold: F(image_idx, dcEstimate_idx)
+      dcEstimate_fineDceAzimuthStartTime: F(image_idx, dcEstimate_idx)
+      dcEstimate_fineDceAzimuthStopTime: F(image_idx, dcEstimate_idx)
+      dcEstimate_fineDce_slantRangeTime: F(image_idx, dcEstimate_idx, fineDce_idx)
+      dcEstimate_fineDce_frequency: F(image_idx, dcEstimate_idx, fineDce_idx)
+  antennaPattern:
+    variables:
+      azimuthTime: F(image_idx, antennaPattern_idx)
+      slantRangeTime: F(image_idx, antennaPattern_idx, antennaPattern_sample_idx)
+      elevationAngle: F(image_idx, antennaPattern_idx, antennaPattern_sample_idx)
+      elevationPattern: F(image_idx, antennaPattern_idx, antennaPattern_sample_idx)
+      incidenceAngle: F(image_idx, antennaPattern_idx, antennaPattern_sample_idx)
+      terrainHeight: F(image_idx, antennaPattern_idx)
+      roll: F(image_idx, antennaPattern_idx)
+  swathTiming:
+    variables:
+      linesPerBurst: F(image_idx)
+      samplesPerBurst: F(image_idx)
+      burst_azimuthTime: F(image_idx, burst_idx)
+      burst_azimuthAnxTime: F(image_idx, burst_idx)
+      burst_sensingTime: F(image_idx, burst_idx)
+      burst_byteOffset: F(image_idx, burst_idx)
+      burst_firstValidSample: F(image_idx, burst_idx, burst_sample_idx)
+      burst_lastValidSample: F(image_idx, burst_idx, burst_sample_idx)
+      burst_burstId absolute: F(image_idx)
+      burst_burstId: F(image_idx)
+  geolocationGrid:
+    variables:
+      point_azimuthTime: F(image_idx, geolocationGrid_idx)
+      point_slantRangeTime: F(image_idx, geolocationGrid_idx)
+      point_line: F(image_idx, geolocationGrid_idx)
+      point_pixel: F(image_idx, geolocationGrid_idx)
+      point_latitude: F(image_idx, geolocationGrid_idx)
+      point_longitude: F(image_idx, geolocationGrid_idx)
+      point_height: F(image_idx, geolocationGrid_idx)
+      point_incidenceAngle: F(image_idx, geolocationGrid_idx)
+      point_elevationAngle: F(image_idx, geolocationGrid_idx)
+  coordinateConversion:
+    variables:
+      azimuthTime: F(image_idx, coordinateConversion_idx)
+      slantRangeTime: F(image_idx, coordinateConversion_idx)
+      sr0: F(image_idx, coordinateConversion_idx)
+      srgrCoefficients: F(image_idx, coordinateConversion_idx, coefficient_idx)
+      gr0: F(image_idx, coordinateConversion_idx)
+      grsrCoefficients: F(image_idx, coordinateConversion_idx, coefficient_idx)
+  swarhMerge:
+    variables:
+      swathBounds_azimuthTime: F(image_idx, swathBounds_idx)
+      swathBounds_firstAzimuthLine: F(image_idx, swathBounds_idx)
+      swathBounds_firstRangeSample: F(image_idx, swathBounds_idx)
+      swathBounds_lastAzimuthLine: F(image_idx, swathBounds_idx)
+      swathBounds_lastRangeSample: F(image_idx, swathBounds_idx)
+  rfi:
+    variables:
+      mitigationApplied: F(image_idx)
+      detectionFromNoiseReport_noiseSensingTime: F(image_idx, rfiDetectionFromNoiseReport_idx)
+      detectionFromNoiseReport_rfiDetected: F(image_idx, rfiDetectionFromNoiseReport_idx)
+      detectionFromNoiseReport_maxKLDivergence: F(image_idx, rfiDetectionFromNoiseReport_idx)
+      detectionFromNoiseReport_maxFisherZ: F(image_idx, rfiDetectionFromNoiseReport_idx)
+      detectionFromNoiseReport_maxRfiPsd: F(image_idx, rfiDetectionFromNoiseReport_idx)
+      burstReport_azimuthTime: F(image_idx, rfiBurstReport_idx)
+      burstReport_inBandOutBandPowerRatio: F(image_idx, rfiBurstReport_idx)
+  calibration:
+    variables:
+      absoluteCalibrationConstant: F(image_idx)
+      calibrationVector_azimuthTime: F(image_idx, calibrationVector_idx)
+      calibrationVector_line: F(image_idx, calibrationVector_idx)
+      calibrationVector_pixel: F(image_idx, calibrationVector_idx, calibrationVector_sample_idx)
+      calibrationVector_sigmaNought: F(image_idx, calibrationVector_idx, calibrationVector_sample_idx)
+      calibrationVector_betaNought: F(image_idx, calibrationVector_idx, calibrationVector_sample_idx)
+      calibrationVector_gamma: F(image_idx, calibrationVector_idx, calibrationVector_sample_idx)
+      calibrationVector_dn: F(image_idx, calibrationVector_idx, calibrationVector_sample_idx)

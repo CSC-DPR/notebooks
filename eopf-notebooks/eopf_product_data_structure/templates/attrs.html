@@ -1,0 +1,17 @@
+{% if container %}
+<li data-jstree='{"icon":"bi bi-info-square"}'>
+    <span class="text-capitalize text-secondary fw-bold">attributes</span>
+{% endif %}
+    <ul>
+        {% for name, value in attrs.items() %}
+            <li data-jstree='{"icon":"bi bi-info"}'>
+                
+                <span class="text-secondary">{{ name }} : </span>
+                <span class="m-5 text-muted">{{ value }}</span>
+            </li>
+        
+        {% endfor %}
+    </ul>
+{% if container %}
+</li>
+{% endif %}

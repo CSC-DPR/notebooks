@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Sentinel Product Data Structures and Formatting</title>
+    <!-- 2 load the theme CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <!-- 3 setup a container element -->
+    <div class="d-flex flex-column d-flex align-items-left">
+        <!-- <div class="mt-2 p-2 border border-white rounded bg-secondary text-white">
+            <h2>
+                S3A_OL_2_LFR____
+            </h2>
+        </div> -->
+
+        <div class="product_frame p-2" id="jstree">
+            <!-- in this example the tree is populated from inline HTML -->
+            <ul>
+                <li data-jstree='{"icon":"bi bi-diagram-3-fill","opened":true}'>
+                    <span class="text-uppercase text-primary fw-bold">S3A_OL_2_LFR____</span>
+
+                    <ul>
+                        <li data-jstree='{"icon":"bi bi-info-square"}' id="global_attributes_node">
+                            <span class="text-capitalize text-secondary fw-bold">attributes</span>
+                            <ul>
+                                
+                                    <li data-jstree='{"icon":"bi bi-info"}' id="global_attributes_node_absolute_orbit_number">
+                                        
+                                        <span class="text-secondary">absolute_orbit_number : </span>
+                                        <span class="m-5 text-muted">20172</span>
+                                    </li>
+                                
+                                
+                                    <li data-jstree='{"icon":"bi bi-info"}' id="global_attributes_node_ac_subsampling_factor">
+                                        
+                                        <span class="text-secondary">ac_subsampling_factor : </span>
+                                        <span class="m-5 text-muted">64</span>
+                                    </li>
+                                
+                                
+                                    <li data-jstree='{"icon":"bi bi-info"}' id="global_attributes_node_al_subsampling_factor">
+                                        
+                                        <span class="text-secondary">al_subsampling_factor : </span>
+                                        <span class="m-5 text-muted">1</span>
+                                    </li>
+                                
+                                
+                                    <li data-jstree='{"icon":"bi bi-info"}' id="global_attributes_node_comment">
+                                        
+                                        <span class="text-secondary">comment : </span>
+                                        <span class="m-5 text-muted"> ...</span>
+                                    </li>
+                                
+                                
+                                    <li data-jstree='{"icon":"bi bi-info"}' id="global_attributes_node_contact">
+                                        
+                                        <span class="text-secondary">contact : </span>
+                                        <span class="m-5 text-muted">eosupport@copernicus.esa.int...</span>
+                                    </li>
+                                
+                                
+                                    <li data-jstree='{"icon":"bi bi-info"}' id="global_attributes_node_creation_time">
+                                        
+                                        <span class="text-secondary">creation_time : </span>
+                                        <span class="m-5 text-muted">2020-01-02T14:32:38Z...</span>
+                                    </li>
+                                
+                                
+                                    <li data-jstree='{"icon":"bi bi-info"}' id="global_attributes_node_history">
+                                        
+                                        <span class="text-secondary">history : </span>
+                                        <span class="m-5 text-muted">  2020-01-02T14:32:38Z: PUGCoreProcessor /data/ipf...</span>
+                                    </li>
+                                
+                                
+                                    <li data-jstree='{"icon":"bi bi-info"}' id="global_attributes_node_institution">
+                                        
+                                        <span class="text-secondary">institution : </span>
+                                        <span class="m-5 text-muted">LN1...</span>
+                                    </li>
+                                
+                                
+                                    <li data-jstree='{"icon":"bi bi-info"}' id="global_attributes_node_netCDF_version">
+                                        
+                                        <span class="text-secondary">netCDF_version : </span>
+                                        <span class="m-5 text-muted">4.2 of Mar 13 2018 10:14:33 $...</span>
+                                    </li>
+                                
+                                
+                                    <li data-jstree='{"icon":"bi bi-info"}' id="global_attributes_node_product_name">
+                                        
+                                        <span class="text-secondary">product_name : </span>
+                                        <span class="m-5 text-muted">S3A_OL_2_LFR____20200101T101217_20200101T101517_20...</span>
+                                    </li>
+                                
+                                
+                                    <li data-jstree='{"icon":"bi bi-info"}' id="global_attributes_node_references">
+                                        
+                                        <span class="text-secondary">references : </span>
+                                        <span class="m-5 text-muted">S3IPF PDS 004.2 - i2r2 - Product Data Format Speci...</span>
+                                    </li>
+                                
+                                
+                                    <li data-jstree='{"icon":"bi bi-info"}' id="global_attributes_node_resolution">
+                                        
+                                        <span class="text-secondary">resolution : </span>
+                                        <span class="m-5 text-muted">[ 270 294 ]...</span>
+                                    </li>
+                                
+                                
+                                    <li data-jstree='{"icon":"bi bi-info"}' id="global_attributes_node_source">
+                                        
+                                        <span class="text-secondary">source : </span>
+                                        <span class="m-5 text-muted">IPF-OL-2 06.13...</span>
+                                    </li>
+                                
+                                
+                                    <li data-jstree='{"icon":"bi bi-info"}' id="global_attributes_node_start_time">
+                                        
+                                        <span class="text-secondary">start_time : </span>
+                                        <span class="m-5 text-muted">2020-01-01T10:12:16.827715Z...</span>
+                                    </li>
+                                
+                                
+                                    <li data-jstree='{"icon":"bi bi-info"}' id="global_attributes_node_stop_time">
+                                        
+                                        <span class="text-secondary">stop_time : </span>
+                                        <span class="m-5 text-muted">2020-01-01T10:15:16.792784Z...</span>
+                                    </li>
+                                
+                                
+                                    <li data-jstree='{"icon":"bi bi-info"}' id="global_attributes_node_title">
+                                        
+                                        <span class="text-secondary">title : </span>
+                                        <span class="m-5 text-muted">OLCI Level 2 LAND Product, Geo Coordinates Data Se...</span>
+                                    </li>
+                                
+                                
+                                    <li data-jstree='{"icon":"bi bi-info"}' id="global_attributes_node_metadata_files">
+                                        
+                                        <span class="text-secondary">metadata_files : </span>
+                                        <span class="m-5 text-muted">[xfdumanfist.xml]</span>
+                                    </li>
+                                
+                                
+                                
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <ul>
+                        
+                            
+                            
+                            <li data-jstree='{"icon":"bi bi-geo-alt"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63">
+                                <span class="text-capitalize text-secondary fw-bold">coordinates</span>
+                                <ul>
+                                    <li data-jstree='{"icon":"bi bi-box"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_dimensions">
+                                        <span class="text-secondary">Dimensions( rows,columns,tie_rows,tie_columns )</span>
+                                    </li>
+
+                                    
+
+                                    <li data-jstree='{"icon":"bi bi-info-square"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_attributes">
+                                        <span class="text-secondary">Attributes</span>
+                                        <ul>
+                                            
+                                                <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_attributes_description">
+                                                    
+                                                    <span class="text-secondary">description : </span>
+                                                    <span class="m-5 text-muted">coordinates Data Group</span>
+                                                </li>
+                                            
+                                            
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li data-jstree='{"icon":"bi bi-folder"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_variables">
+                                        <span class="text-capitalize text-secondary">variables</span>
+                                        <ul>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_time_stamp">
+                                                    <span class="text-secondary">time_stamp( rows )  : int64</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_time_stamp__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">-1</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_time_stamp_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Elapsed time since 01 Jan 2000 0h</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_time_stamp_standard_name">
+                                                                <span class="text-secondary">standard_name : </span>
+                                                                <span class="m-5 text-muted">time</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_time_stamp_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">microseconds since 2000-01-01 00:00:00</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_altitude">
+                                                    <span class="text-secondary">altitude( rows,columns )  : int16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_altitude__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">-32768</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_altitude_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">DEM corrected altitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_altitude_standard_name">
+                                                                <span class="text-secondary">standard_name : </span>
+                                                                <span class="m-5 text-muted">altitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_altitude_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">m</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_altitude_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">9000</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_altitude_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">-1000</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_latitude">
+                                                    <span class="text-secondary">latitude( tie_rows,tie_columns )  : int32</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_latitude__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">-2147483648</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_latitude_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Latitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_latitude_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1e-06</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_latitude_standard_name">
+                                                                <span class="text-secondary">standard_name : </span>
+                                                                <span class="m-5 text-muted">latitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_latitude_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">degrees_north</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_latitude_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">90000000</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_latitude_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">-90000000</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_longitude">
+                                                    <span class="text-secondary">longitude( tie_rows,tie_columns )  : int32</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_longitude__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">-2147483648</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_longitude_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Longitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_longitude_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1e-06</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_longitude_standard_name">
+                                                                <span class="text-secondary">standard_name : </span>
+                                                                <span class="m-5 text-muted">longitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_longitude_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">degrees_east</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_longitude_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">180000000</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="a0ee4640-2246-4414-86e8-8b42014b5b63_longitude_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">-180000000</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+
+                        
+                            
+                            
+                            <li data-jstree='{"icon":"bi bi-diagram-2-fill"}' id="ff74a295-d687-4858-9654-42df9974f1a1">
+                                <span class="text-capitalize text-secondary fw-bold">measurements</span>
+                                <ul>
+                                    <li data-jstree='{"icon":"bi bi-box"}' id="ff74a295-d687-4858-9654-42df9974f1a1_dimensions">
+                                        <span class="text-secondary">Dimensions( rows,columns )</span>
+                                    </li>
+
+                                    
+
+                                    <li data-jstree='{"icon":"bi bi-info-square"}' id="ff74a295-d687-4858-9654-42df9974f1a1_attributes">
+                                        <span class="text-secondary">Attributes</span>
+                                        <ul>
+                                            
+                                                <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_attributes_description">
+                                                    
+                                                    <span class="text-secondary">description : </span>
+                                                    <span class="m-5 text-muted">measurements Data Group</span>
+                                                </li>
+                                            
+                                            
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li data-jstree='{"icon":"bi bi-folder"}' id="ff74a295-d687-4858-9654-42df9974f1a1_variables">
+                                        <span class="text-capitalize text-secondary">variables</span>
+                                        <ul>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OGVI">
+                                                    <span class="text-secondary">OGVI( rows,columns )  : uint8</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OGVI__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">255</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OGVI_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OGVI_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">OLCI Global Vegetation Index</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OGVI_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">0.003937008</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OGVI_err">
+                                                    <span class="text-secondary">OGVI_err( rows,columns )  : uint8</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OGVI_err__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">255</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OGVI_err_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OGVI_err_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Error estimate for OLCI Global Vegetation Index</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OGVI_err_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">0.003937008</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OTCI">
+                                                    <span class="text-secondary">OTCI( rows,columns )  : uint8</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OTCI__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">255</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OTCI_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OTCI_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">OLCI Terrestrial Chlorophyll Index</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OTCI_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">0.025590552</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OTCI_err">
+                                                    <span class="text-secondary">OTCI_err( rows,columns )  : uint8</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OTCI_err__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">255</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OTCI_err_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OTCI_err_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Error estimate for OLCI Terrestrial Chlorophyll Index</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OTCI_err_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">0.025590552</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OTCI_quality_flags">
+                                                    <span class="text-secondary">OTCI_quality_flags( rows,columns )  : uint8</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OTCI_quality_flags_flag_descriptions">
+                                                                <span class="text-secondary">flag_descriptions : </span>
+                                                                <span class="m-5 text-muted">Soil flag bit 1\tSoil flag bit 2\tAngle flag bit 1\tAngle flag bit 2\tRadiometry flag\tTCI flag</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OTCI_quality_flags_flag_masks">
+                                                                <span class="text-secondary">flag_masks : </span>
+                                                                <span class="m-5 text-muted">[  1   2  16  32  64 128]</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OTCI_quality_flags_flag_meanings">
+                                                                <span class="text-secondary">flag_meanings : </span>
+                                                                <span class="m-5 text-muted">Soil_flag_1 Soil_flag_2 Angle_flag_1 Angle_flag_2 Radiometry_flag TCI_flag</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_OTCI_quality_flags_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">OLCI Terrestrial Vegetation Index Quality Flag</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="ff74a295-d687-4858-9654-42df9974f1a1_IWV">
+                                                    <span class="text-secondary">IWV( rows,columns )  : uint8</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_IWV__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">255</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_IWV_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_IWV_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Integrated water vapour column above the current pixel</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_IWV_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">0.29999998</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_IWV_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">kg.m-2</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="ff74a295-d687-4858-9654-42df9974f1a1_IWV_err">
+                                                    <span class="text-secondary">IWV_err( rows,columns )  : uint8</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_IWV_err__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">255</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_IWV_err_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_IWV_err_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Error estimate for Integrated water vapour column above the current pixel</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_IWV_err_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">0.29999998</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_IWV_err_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">kg.m-2</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="ff74a295-d687-4858-9654-42df9974f1a1_LQSF">
+                                                    <span class="text-secondary">LQSF( rows,columns )  : uint32</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_LQSF_flag_masks">
+                                                                <span class="text-secondary">flag_masks : </span>
+                                                                <span class="m-5 text-muted">[       1        2        4        8  8388608 16777216       16       32
+       64      128      256      512     1024     2048     4096     8192
+    16384    32768    65536   131072   262144   524288  1048576  2097152
+  4194304]</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_LQSF_flag_meanings">
+                                                                <span class="text-secondary">flag_meanings : </span>
+                                                                <span class="m-5 text-muted">INVALID WATER LAND CLOUD CLOUD_AMBIGUOUS CLOUD_MARGIN SNOW_ICE INLAND_WATER TIDAL COSMETIC SUSPECT HISOLZEN SATURATED WV_FAIL OGVI_FAIL OTCI_FAIL LRAYFAIL OGVI_CLASS_BAD OGVI_CLASS_WS OGVI_CLASS_CSI OGVI_CLASS_BRIGHT OGVI_CLASS_INVAL_REC OTCI_BAD_IN OTCI_CLASS_ANG OTCI_CLASS_CLSN</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_LQSF_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Classification flags, quality and science flags for Land pixels</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC681">
+                                                    <span class="text-secondary">RC681( rows,columns )  : uint16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC681__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">65535</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC681_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC681_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Rectified reflectance for the red band</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC681_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.5259255e-05</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC681_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">mW.m-2.sr-1.nm-1</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC681_err">
+                                                    <span class="text-secondary">RC681_err( rows,columns )  : uint16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC681_err__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">65535</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC681_err_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC681_err_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Error estimate for Rectified reflectance for the red band</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC681_err_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.5259255e-05</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC681_err_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">mW.m-2.sr-1.nm-1</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC865">
+                                                    <span class="text-secondary">RC865( rows,columns )  : uint16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC865__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">65535</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC865_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC865_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Rectified reflectance for the near infrared band</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC865_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.5259255e-05</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC865_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">mW.m-2.sr-1.nm-1</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC865_err">
+                                                    <span class="text-secondary">RC865_err( rows,columns )  : uint16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC865_err__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">65535</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC865_err_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC865_err_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Error estimate for Rectified reflectance for the near infrared band</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC865_err_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.5259255e-05</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="ff74a295-d687-4858-9654-42df9974f1a1_RC865_err_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">mW.m-2.sr-1.nm-1</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+
+                        
+                            
+                            
+                            <li data-jstree='{"icon":"bi bi-diagram-2-fill"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84">
+                                <span class="text-capitalize text-secondary fw-bold">tie_points</span>
+                                <ul>
+                                    <li data-jstree='{"icon":"bi bi-box"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_dimensions">
+                                        <span class="text-secondary">Dimensions( tie_rows,tie_columns,tie_pressure_levels,wind_vectors )</span>
+                                    </li>
+
+                                    
+
+                                    <li data-jstree='{"icon":"bi bi-info-square"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_attributes">
+                                        <span class="text-secondary">Attributes</span>
+                                        <ul>
+                                            
+                                                <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_attributes_description">
+                                                    
+                                                    <span class="text-secondary">description : </span>
+                                                    <span class="m-5 text-muted">tie_points Data Group</span>
+                                                </li>
+                                            
+                                            
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li data-jstree='{"icon":"bi bi-folder"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_variables">
+                                        <span class="text-capitalize text-secondary">variables</span>
+                                        <ul>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_atmospheric_temperature_profile">
+                                                    <span class="text-secondary">atmospheric_temperature_profile( tie_rows,tie_columns,tie_pressure_levels )  : float32</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_atmospheric_temperature_profile__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">-1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_atmospheric_temperature_profile_ancillary_variables">
+                                                                <span class="text-secondary">ancillary_variables : </span>
+                                                                <span class="m-5 text-muted">reference_pressure_level</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_atmospheric_temperature_profile_coordinates">
+                                                                <span class="text-secondary">coordinates : </span>
+                                                                <span class="m-5 text-muted">latitude longitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_atmospheric_temperature_profile_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Air temperature profile</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_atmospheric_temperature_profile_standard_name">
+                                                                <span class="text-secondary">standard_name : </span>
+                                                                <span class="m-5 text-muted">air_temperature</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_atmospheric_temperature_profile_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">K</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_atmospheric_temperature_profile_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">400.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_atmospheric_temperature_profile_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_horizontal_wind">
+                                                    <span class="text-secondary">horizontal_wind( tie_rows,tie_columns,wind_vectors )  : float32</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_horizontal_wind__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">9.96921e+36</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_horizontal_wind_coordinates">
+                                                                <span class="text-secondary">coordinates : </span>
+                                                                <span class="m-5 text-muted">latitude longitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_horizontal_wind_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Horizontal wind vector at 10m altitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_horizontal_wind_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">m.s-1</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_horizontal_wind_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">100.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_horizontal_wind_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">-100.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_humidity">
+                                                    <span class="text-secondary">humidity( tie_rows,tie_columns )  : float32</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_humidity__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">-1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_humidity_coordinates">
+                                                                <span class="text-secondary">coordinates : </span>
+                                                                <span class="m-5 text-muted">latitude longitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_humidity_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Relative humidity</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_humidity_standard_name">
+                                                                <span class="text-secondary">standard_name : </span>
+                                                                <span class="m-5 text-muted">relative_humidity</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_humidity_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">%</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_humidity_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">100.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_humidity_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_reference_pressure_level">
+                                                    <span class="text-secondary">reference_pressure_level( tie_pressure_levels )  : float32</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_reference_pressure_level__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">-1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_reference_pressure_level_coordinates">
+                                                                <span class="text-secondary">coordinates : </span>
+                                                                <span class="m-5 text-muted">latitude longitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_reference_pressure_level_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Reference pressure level</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_reference_pressure_level_standard_name">
+                                                                <span class="text-secondary">standard_name : </span>
+                                                                <span class="m-5 text-muted">air_pressure</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_reference_pressure_level_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">hPa</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_reference_pressure_level_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">1500.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_reference_pressure_level_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_sea_level_pressure">
+                                                    <span class="text-secondary">sea_level_pressure( tie_rows,tie_columns )  : float32</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_sea_level_pressure__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">-1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_sea_level_pressure_coordinates">
+                                                                <span class="text-secondary">coordinates : </span>
+                                                                <span class="m-5 text-muted">latitude longitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_sea_level_pressure_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Mean sea level pressure</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_sea_level_pressure_standard_name">
+                                                                <span class="text-secondary">standard_name : </span>
+                                                                <span class="m-5 text-muted">air_pressure_at_sea_level</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_sea_level_pressure_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">hPa</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_sea_level_pressure_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">1500.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_sea_level_pressure_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_total_columnar_water_vapour">
+                                                    <span class="text-secondary">total_columnar_water_vapour( tie_rows,tie_columns )  : float32</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_total_columnar_water_vapour__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">-1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_total_columnar_water_vapour_coordinates">
+                                                                <span class="text-secondary">coordinates : </span>
+                                                                <span class="m-5 text-muted">latitude longitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_total_columnar_water_vapour_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Total column water vapour</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_total_columnar_water_vapour_standard_name">
+                                                                <span class="text-secondary">standard_name : </span>
+                                                                <span class="m-5 text-muted">atmosphere_water_vapor_content</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_total_columnar_water_vapour_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">kg.m-2</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_total_columnar_water_vapour_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">100.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_total_columnar_water_vapour_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_total_ozone">
+                                                    <span class="text-secondary">total_ozone( tie_rows,tie_columns )  : float32</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_total_ozone__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">-1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_total_ozone_coordinates">
+                                                                <span class="text-secondary">coordinates : </span>
+                                                                <span class="m-5 text-muted">latitude longitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_total_ozone_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Total columnar ozone</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_total_ozone_standard_name">
+                                                                <span class="text-secondary">standard_name : </span>
+                                                                <span class="m-5 text-muted">atmosphere_mass_content_of_ozone</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_total_ozone_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">kg.m-2</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_total_ozone_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">100.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_total_ozone_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_OAA">
+                                                    <span class="text-secondary">OAA( tie_rows,tie_columns )  : int32</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_OAA__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">-2147483648</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_OAA_coordinates">
+                                                                <span class="text-secondary">coordinates : </span>
+                                                                <span class="m-5 text-muted">latitude longitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_OAA_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Observation (Viewing) Azimuth Angle</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_OAA_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1e-06</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_OAA_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">degrees</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_OAA_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">180000000</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_OAA_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">-180000000</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_OZA">
+                                                    <span class="text-secondary">OZA( tie_rows,tie_columns )  : uint32</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_OZA__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">4294967295</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_OZA_coordinates">
+                                                                <span class="text-secondary">coordinates : </span>
+                                                                <span class="m-5 text-muted">latitude longitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_OZA_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Observation (Viewing) Zenith Angle</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_OZA_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1e-06</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_OZA_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">degrees</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_OZA_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">180000000</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_OZA_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_SAA">
+                                                    <span class="text-secondary">SAA( tie_rows,tie_columns )  : int32</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_SAA__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">-2147483648</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_SAA_coordinates">
+                                                                <span class="text-secondary">coordinates : </span>
+                                                                <span class="m-5 text-muted">latitude longitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_SAA_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Sun Azimuth Angle</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_SAA_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1e-06</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_SAA_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">degrees</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_SAA_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">180000000</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_SAA_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">-180000000</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_SZA">
+                                                    <span class="text-secondary">SZA( tie_rows,tie_columns )  : uint32</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_SZA__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">4294967295</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_SZA_coordinates">
+                                                                <span class="text-secondary">coordinates : </span>
+                                                                <span class="m-5 text-muted">latitude longitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_SZA_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Sun Zenith Angle</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_SZA_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1e-06</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_SZA_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">degrees</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_SZA_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">180000000</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="2fb1407e-e52e-4e98-8f7c-0a56b81acd84_SZA_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+
+                        
+                            
+                            
+                            <li data-jstree='{"icon":"bi bi-diagram-2-fill"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff">
+                                <span class="text-capitalize text-secondary fw-bold">instrument_data</span>
+                                <ul>
+                                    <li data-jstree='{"icon":"bi bi-box"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_dimensions">
+                                        <span class="text-secondary">Dimensions( bands,detectors,rows,columns )</span>
+                                    </li>
+
+                                    
+
+                                    <li data-jstree='{"icon":"bi bi-info-square"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_attributes">
+                                        <span class="text-secondary">Attributes</span>
+                                        <ul>
+                                            
+                                                <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_attributes_description">
+                                                    
+                                                    <span class="text-secondary">description : </span>
+                                                    <span class="m-5 text-muted">instrument_data Data Group</span>
+                                                </li>
+                                            
+                                            
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li data-jstree='{"icon":"bi bi-folder"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_variables">
+                                        <span class="text-capitalize text-secondary">variables</span>
+                                        <ul>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_FWHM">
+                                                    <span class="text-secondary">FWHM( bands,detectors )  : float32</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_FWHM__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">-1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_FWHM_ancillary_variables">
+                                                                <span class="text-secondary">ancillary_variables : </span>
+                                                                <span class="m-5 text-muted">detector_index lambda0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_FWHM_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">OLCI bandwidth (Full Widths at Half Maximum)</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_FWHM_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">nm</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_FWHM_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">650.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_FWHM_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_detector_index">
+                                                    <span class="text-secondary">detector_index( rows,columns )  : int16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_detector_index__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">-1</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_detector_index_coordinates">
+                                                                <span class="text-secondary">coordinates : </span>
+                                                                <span class="m-5 text-muted">time_stamp altitude latitude longitude</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_detector_index_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Detector index</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_detector_index_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">3699</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_detector_index_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_frame_offset">
+                                                    <span class="text-secondary">frame_offset( detectors )  : int16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_frame_offset__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">-32768</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_frame_offset_ancillary_variables">
+                                                                <span class="text-secondary">ancillary_variables : </span>
+                                                                <span class="m-5 text-muted">detector_index</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_frame_offset_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Re-sampling along-track frame offset</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_frame_offset_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">15</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_frame_offset_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">-15</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_lambda0">
+                                                    <span class="text-secondary">lambda0( bands,detectors )  : float32</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_lambda0__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">-1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_lambda0_ancillary_variables">
+                                                                <span class="text-secondary">ancillary_variables : </span>
+                                                                <span class="m-5 text-muted">detector_index FWHM</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_lambda0_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">OLCI characterised central wavelength</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_lambda0_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">nm</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_lambda0_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">1040.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_lambda0_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">390.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_relative_spectral_covariance">
+                                                    <span class="text-secondary">relative_spectral_covariance( bands,bands )  : float32</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_relative_spectral_covariance__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">nan</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_relative_spectral_covariance_ancillary_variables">
+                                                                <span class="text-secondary">ancillary_variables : </span>
+                                                                <span class="m-5 text-muted">lambda0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_relative_spectral_covariance_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">Relative spectral covariance matrix</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_solar_flux">
+                                                    <span class="text-secondary">solar_flux( bands,detectors )  : float32</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_solar_flux__FillValue">
+                                                                <span class="text-secondary">_FillValue : </span>
+                                                                <span class="m-5 text-muted">-1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_solar_flux_ancillary_variables">
+                                                                <span class="text-secondary">ancillary_variables : </span>
+                                                                <span class="m-5 text-muted">detector_index lambda0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_solar_flux_long_name">
+                                                                <span class="text-secondary">long_name : </span>
+                                                                <span class="m-5 text-muted">In-band solar irradiance, seasonally corrected</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_solar_flux_units">
+                                                                <span class="text-secondary">units : </span>
+                                                                <span class="m-5 text-muted">mW.m-2.nm-1</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_solar_flux_valid_max">
+                                                                <span class="text-secondary">valid_max : </span>
+                                                                <span class="m-5 text-muted">2500.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="025374d7-f14d-4908-88cd-fa17bb4900ff_solar_flux_valid_min">
+                                                                <span class="text-secondary">valid_min : </span>
+                                                                <span class="m-5 text-muted">500.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+
+                        
+                    </ul>
+
+                    <ul>
+                        <li data-jstree='{"icon":"bi bi-link-45deg"}' id="metadata_node">
+                            <span class="text-capitalize text-secondary fw-bold">Metadata</span>
+
+                            <ul>
+                                
+                                <li data-jstree='{"icon":"bi bi-diagram-5"}' id="metadata_node_xfdumanifest.xml"> xfdumanifest.xml</li>
+                                
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+        </div>
+
+
+    </div>
+
+    <!-- 4 include the jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <!-- 5 include the minified jstree source -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            // 6 create an instance when the DOM is ready
+            $('#jstree').jstree();
+            // 7 bind to events triggered on the tree
+            $('#jstree').on("changed.jstree", function (e, data) {
+                console.log(data.selected);
+            });
+            // 8 interact with the tree - either way is OK
+            // $('button').on('click', function () 
+            // {
+            //   $('#jstree').jstree(true).select_node('groups_node');
+            //   $('#jstree').jstree('select_node', 'groups_node');
+            //   $.jstree.reference('#jstree').select_node('groups_node');
+            // });
+        });
+    </script>
+</body>
+
+</html>

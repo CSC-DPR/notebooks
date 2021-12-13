@@ -1,0 +1,171 @@
+product:
+  attributes:
+    contact: eohelp@copernicus.esa.int
+    mission_ID: ''
+    sensor_ID: ''
+    instrument_mode: ''
+    processor_version: ''
+    processing_centre: ''
+    processing_time: ''
+    product_name: ''
+    resolution: ''
+    acquisition_start_time: ''
+    acquisition_stop_time: ''
+    title: 'MSI Level-1a/b Product'
+    lon lat min: ''
+    lon lat max: ''
+    product_format: ''
+    product_type: 
+    processing_level: ''
+    orbit_direction (asc or desc): ''
+    relative orbit number: ''
+    absolute orbit number: ''
+  coordinates:
+    variables:
+      latitude_10m: F(rows_10m,columns_10m) -> int32
+      longitude_10m: F(rows_10m,columns_10m) -> int32
+      latitude_20m: F(rows_20m,columns_20m) -> int32
+      longitude_20m: F(rows_20m,columns_20m) -> int32
+      latitude_60m: F(rows_60m,columns_60m) -> int32
+      longitude_60m: F(rows_60m,columns_60m) -> int32
+  data:
+    groups:
+      reflectances_10m:
+        variables:
+          band02_reflectance: F(rows_10m,columns_10m) -> int32
+          band03_reflectance: F(rows_10m,columns_10m) -> int32
+          band04_reflectance: F(rows_10m,columns_10m) -> int32
+          band08_reflectance: F(rows_10m,columns_10m) -> int32
+
+      reflectances_20m:
+        variables:
+          band05_reflectance: F(rows_20m,columns_20m) -> int32
+          band06_reflectance: F(rows_20m,columns_20m) -> int32
+          band07_reflectance: F(rows_20m,columns_20m) -> int32
+          band8a_reflectance: F(rows_20m,columns_20m) -> int32
+          band11_reflectance: F(rows_20m,columns_20m) -> int32
+          band12_reflectance: F(rows_20m,columns_20m) -> int32
+
+      reflectances_60m:
+        variables:
+          band01_reflectance: F(rows_60m,columns_60m) -> int32
+          band09_reflectance: F(rows_60m,columns_60m) -> int32
+          band10_reflectance: F(rows_60m,columns_60m) -> int32
+
+  quality:
+    variables:
+      quality_flags_60m: F(one) -> int32
+      quality_flags_20m: F(one) -> int32
+      quality_flags_10m: F(one) -> int32
+      DEGRADED_MSI_DATA_PERCENTAGE: F(one)
+      technical_quality_mask: F(one)
+      radiometric_quality_mask: F(one)
+      EPHEMERIS_QUALITY: F(one)
+      ANCILLARY_QUALITY: F(one)
+
+  information:
+    variables:
+      granule_id: F(one) 
+      datastrip_id: F(one) 
+      detector_id: F(one) 
+      granule_dimensions_60m: F(one) 
+      granule_dimensions_20m: F(one)
+      granule_dimensions_10m: F(one)
+      downlink_priority: F(one)
+      sensing_time: F(one)
+      coarse_cloud_mask: F(one)
+      cloudy_pixel_percentage: F(one)
+      Granule_Footprint: F(one)
+      position_in_datatake: F(one)
+      position_in_datastrip: F(one)
+      Datastrip_Times: F(one)
+      GIPP_filenames: F(one)
+      Granules_List: F(one)
+      Sensor_Configuration: F(one)
+      Time_Correlation_Data_List: F(one)
+      Ephemeris: F(one)
+      Attitudes: F(one)
+      Thermal_Data: F(one)
+      Lost_Source_Packet_List: F(one)
+      Absolute_Location: F(one)
+      Planimetric_Stability: F(one)
+      Multi_Spectral_Registration: F(one)
+      Preliminary_QuickLook: F(one)
+      Geometric_Refining_Quality: F(one)
+      Noise_Model: F(one)
+      ABSOLUTE_CALIBRATION_ACCURACY: F(one)
+      CROSS_BAND_CALIBRATION_ACCURACY: F(one)
+      MULTITEMPORAL_CALIBRATION_ACCURACY: F(one)
+      ERS_Bulletin_ref: F(one)
+      GIPP_List: F(one)
+      ECMWF_data_ref: F(one)
+      CAMS_data_ref: F(one)
+      DEM_ref: F(one)
+      Reference_Band: F(one)
+      First pixel number (convention): F(one)
+      incidence angles and solar angles: F(one) 
+      granule_centre: F(one)
+      quicklook_centre: F(one)
+      quicklook_footprint: F(one)
+      instrument_mode: F(one)
+      spacecraft_name: F(one)
+      datatake_sensing_start: F(one)
+      sensing_orbit_number: F(one)
+      sensing_orbit_direction: F(one)
+      processing_baseline: F(one)
+      processing_time: F(one)
+      downlink_orbit_number: F(one)
+      archiving_time: F(one)
+      compress_flag: F(one)
+      equalization_flag: F(one)
+      NUC_table_ID: F(one)
+      ActiveDetectorsList: F(one)
+      TDI_Configuration_List: F(one)
+      PhysicalGain: F(one)
+      CompressionRate: F(one)
+      IntegrationTime: F(one)
+      Resolution: F(one)
+      LinePeriod: F(one)
+      TimeStamp: F(one)
+      GPS_SYNC: F(one)
+      THEORETICAL_LINE_PERIOD: F(one)
+      TimeQualityIndicators: F(one)
+      SWIR_rearrangement_flag: F(one)
+      defective_pixels_flag: F(one)
+      nodata_pixels_flag: F(one)
+      saturated_pixels_flag: F(one)
+      spectral_wavelength_min: F(one)
+      spectral_wavelength_max: F(one)
+      spectral_wavelength_centre: F(one)
+      spectral_response_step: F(one)
+      spectral_response_values: F(one)
+      red_channel: F(one)
+      green_channel: F(one)
+      blue_channel: F(one)
+      List_Fake_Decompr_Source_Frames: F(one)
+      CompressionFlag: F(one)
+      UT1_UTC: F(one)
+      GPS_UTC: F(one)
+      GPS_TAI: F(one)
+      Pole_U_angle: F(one)
+      Pole_V_angle: F(one)
+      source_packets_info: F(one)
+      equalization_correction: F(one)
+      crosstalk_correction: F(one)
+      removed_blind_pixels: F(one)
+      restoration_flag: F(one)
+      binning_flag: F(one)
+      radiometric_offset: F(one)
+      RGM_flag: F(one)
+      geometric_refinement_flag: F(one)
+      geo_refinement_band: F(one)
+      reference_image_list: F(one)
+      VNIR_SWIR_registration_flag: F(one)
+      VNIR_SWIR_registration_result: F(one)
+      Refinement_Corrections: F(one)
+      geo_refinement_quality: F(one)
+      Correlation_Quality: F(one)
+      refining_performance_Indicators: F(one)
+      Updated_Absolute_Location: F(one)
+      GRI_ref: F(one)
+      # TCI, PVI only for L1C and L2A

@@ -1,0 +1,2131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Sentinel Product Data Structures and Formatting</title>
+    <!-- 2 load the theme CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <!-- 3 setup a container element -->
+    <div class="d-flex flex-column d-flex align-items-center">
+        <div class="mt-2 p-2 border border-white rounded bg-secondary text-white">
+            <h1>
+                S2_MSIL1C
+            </h1>
+        </div>
+
+        <div class="product_frame p-2" id="jstree">
+            <!-- in this example the tree is populated from inline HTML -->
+            <ul>
+                <li data-jstree='{"icon":"bi bi-diagram-3-fill","opened":true}'>
+                    <span class="text-uppercase text-primary fw-bold">S2_MSIL1C</span>
+
+                    <ul>
+                        <li data-jstree='{"icon":"bi bi-info-square"}' id="global_attributes_node">
+                            <span class="text-capitalize text-secondary fw-bold">global attributes</span>
+                            <ul>
+                                
+                                    <li data-jstree='{"icon":"bi bi-info"}' id="global_attributes_node_metadata_files">
+                                        
+                                        <span class="text-secondary">metadata_files : </span>
+                                        <span class="m-5 text-muted">[xfdumanfist.xml]</span>
+                                    </li>
+                                
+                                
+                                
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <ul>
+                        
+                            <li data-jstree='{"icon":"bi bi-diagram-2-fill"}' id="groups_node_coordinates">
+                                <span class="text-capitalize text-secondary fw-bold">coordinates</span>
+                                <ul>
+                                    <li data-jstree='{"icon":"bi bi-box"}' id="groups_node_coordinates_dimensions">
+                                        <span class="text-secondary">Dimensions( x_10m,y_10m,x_20m,y_20m,x_60m,y_60m )</span>
+                                    </li>
+                                    <li data-jstree='{"icon":"bi bi-geo-alt"}' id="groups_node_coordinates_coordinates">
+                                        <span class="text-secondary">Coordinates</span>
+                                        <ul>
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li data-jstree='{"icon":"bi bi-info-square"}' id="groups_node_coordinates_attributes">
+                                        <span class="text-secondary">Attributes</span>
+                                        <ul>
+                                            
+                                                <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_attributes_description">
+                                                    
+                                                    <span class="text-secondary">description : </span>
+                                                    <span class="m-5 text-muted">coordinates Data Group</span>
+                                                </li>
+                                            
+                                            
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li data-jstree='{"icon":"bi bi-folder"}' id="groups_node_coordinates_variables">
+                                        <span class="text-capitalize text-secondary">variables</span>
+                                        <ul>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_coordinates_spatial_ref">
+                                                    <span class="text-secondary">spatial_ref(  )  : int64</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_spatial_ref_crs_wkt">
+                                                                <span class="text-secondary">crs_wkt : </span>
+                                                                <span class="m-5 text-muted">PROJCS["WGS 84 / UTM zone 45N",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",87],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","32645"]]</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_spatial_ref_semi_major_axis">
+                                                                <span class="text-secondary">semi_major_axis : </span>
+                                                                <span class="m-5 text-muted">6378137.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_spatial_ref_semi_minor_axis">
+                                                                <span class="text-secondary">semi_minor_axis : </span>
+                                                                <span class="m-5 text-muted">6356752.314245179</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_spatial_ref_inverse_flattening">
+                                                                <span class="text-secondary">inverse_flattening : </span>
+                                                                <span class="m-5 text-muted">298.257223563</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_spatial_ref_reference_ellipsoid_name">
+                                                                <span class="text-secondary">reference_ellipsoid_name : </span>
+                                                                <span class="m-5 text-muted">WGS 84</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_spatial_ref_longitude_of_prime_meridian">
+                                                                <span class="text-secondary">longitude_of_prime_meridian : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_spatial_ref_prime_meridian_name">
+                                                                <span class="text-secondary">prime_meridian_name : </span>
+                                                                <span class="m-5 text-muted">Greenwich</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_spatial_ref_geographic_crs_name">
+                                                                <span class="text-secondary">geographic_crs_name : </span>
+                                                                <span class="m-5 text-muted">WGS 84</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_spatial_ref_horizontal_datum_name">
+                                                                <span class="text-secondary">horizontal_datum_name : </span>
+                                                                <span class="m-5 text-muted">World Geodetic System 1984</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_spatial_ref_projected_crs_name">
+                                                                <span class="text-secondary">projected_crs_name : </span>
+                                                                <span class="m-5 text-muted">WGS 84 / UTM zone 45N</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_spatial_ref_grid_mapping_name">
+                                                                <span class="text-secondary">grid_mapping_name : </span>
+                                                                <span class="m-5 text-muted">transverse_mercator</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_spatial_ref_latitude_of_projection_origin">
+                                                                <span class="text-secondary">latitude_of_projection_origin : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_spatial_ref_longitude_of_central_meridian">
+                                                                <span class="text-secondary">longitude_of_central_meridian : </span>
+                                                                <span class="m-5 text-muted">87.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_spatial_ref_false_easting">
+                                                                <span class="text-secondary">false_easting : </span>
+                                                                <span class="m-5 text-muted">500000.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_spatial_ref_false_northing">
+                                                                <span class="text-secondary">false_northing : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_spatial_ref_scale_factor_at_central_meridian">
+                                                                <span class="text-secondary">scale_factor_at_central_meridian : </span>
+                                                                <span class="m-5 text-muted">0.9996</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_spatial_ref_spatial_ref">
+                                                                <span class="text-secondary">spatial_ref : </span>
+                                                                <span class="m-5 text-muted">PROJCS["WGS 84 / UTM zone 45N",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",87],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","32645"]]</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_coordinates_spatial_ref_GeoTransform">
+                                                                <span class="text-secondary">GeoTransform : </span>
+                                                                <span class="m-5 text-muted">699960.0 10.0 0.0 2400000.0 0.0 -10.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_coordinates_x_10m">
+                                                    <span class="text-secondary">x_10m( x_10m )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_coordinates_y_10m">
+                                                    <span class="text-secondary">y_10m( y_10m )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_coordinates_x_20m">
+                                                    <span class="text-secondary">x_20m( x_20m )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_coordinates_y_20m">
+                                                    <span class="text-secondary">y_20m( y_20m )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_coordinates_x_60m">
+                                                    <span class="text-secondary">x_60m( x_60m )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_coordinates_y_60m">
+                                                    <span class="text-secondary">y_60m( y_60m )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        
+                            <li data-jstree='{"icon":"bi bi-diagram-2-fill"}' id="groups_node_tiepoints">
+                                <span class="text-capitalize text-secondary fw-bold">tiepoints</span>
+                                <ul>
+                                    <li data-jstree='{"icon":"bi bi-box"}' id="groups_node_tiepoints_dimensions">
+                                        <span class="text-secondary">Dimensions( y_tiepoints,x_tiepoints )</span>
+                                    </li>
+                                    <li data-jstree='{"icon":"bi bi-geo-alt"}' id="groups_node_tiepoints_coordinates">
+                                        <span class="text-secondary">Coordinates</span>
+                                        <ul>
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li data-jstree='{"icon":"bi bi-info-square"}' id="groups_node_tiepoints_attributes">
+                                        <span class="text-secondary">Attributes</span>
+                                        <ul>
+                                            
+                                                <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_tiepoints_attributes_description">
+                                                    
+                                                    <span class="text-secondary">description : </span>
+                                                    <span class="m-5 text-muted">tiepoints Data Group</span>
+                                                </li>
+                                            
+                                            
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li data-jstree='{"icon":"bi bi-folder"}' id="groups_node_tiepoints_variables">
+                                        <span class="text-capitalize text-secondary">variables</span>
+                                        <ul>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_tiepoints_y_tiepoints">
+                                                    <span class="text-secondary">y_tiepoints( y_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_tiepoints_x_tiepoints">
+                                                    <span class="text-secondary">x_tiepoints( x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        
+                            <li data-jstree='{"icon":"bi bi-diagram-2-fill"}' id="groups_node_measurements_10m">
+                                <span class="text-capitalize text-secondary fw-bold">measurements_10m</span>
+                                <ul>
+                                    <li data-jstree='{"icon":"bi bi-box"}' id="groups_node_measurements_10m_dimensions">
+                                        <span class="text-secondary">Dimensions( y_10m,x_10m )</span>
+                                    </li>
+                                    <li data-jstree='{"icon":"bi bi-geo-alt"}' id="groups_node_measurements_10m_coordinates">
+                                        <span class="text-secondary">Coordinates</span>
+                                        <ul>
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li data-jstree='{"icon":"bi bi-info-square"}' id="groups_node_measurements_10m_attributes">
+                                        <span class="text-secondary">Attributes</span>
+                                        <ul>
+                                            
+                                                <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_10m_attributes_description">
+                                                    
+                                                    <span class="text-secondary">description : </span>
+                                                    <span class="m-5 text-muted">measurements_10m Data Group</span>
+                                                </li>
+                                            
+                                            
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li data-jstree='{"icon":"bi bi-folder"}' id="groups_node_measurements_10m_variables">
+                                        <span class="text-capitalize text-secondary">variables</span>
+                                        <ul>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_measurements_10m_B02">
+                                                    <span class="text-secondary">B02( y_10m,x_10m )  : uint16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_10m_B02_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_10m_B02_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_measurements_10m_B03">
+                                                    <span class="text-secondary">B03( y_10m,x_10m )  : uint16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_10m_B03_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_10m_B03_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_measurements_10m_B04">
+                                                    <span class="text-secondary">B04( y_10m,x_10m )  : uint16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_10m_B04_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_10m_B04_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_measurements_10m_B08">
+                                                    <span class="text-secondary">B08( y_10m,x_10m )  : uint16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_10m_B08_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_10m_B08_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        
+                            <li data-jstree='{"icon":"bi bi-diagram-2-fill"}' id="groups_node_measurements_20m">
+                                <span class="text-capitalize text-secondary fw-bold">measurements_20m</span>
+                                <ul>
+                                    <li data-jstree='{"icon":"bi bi-box"}' id="groups_node_measurements_20m_dimensions">
+                                        <span class="text-secondary">Dimensions( y_20m,x_20m )</span>
+                                    </li>
+                                    <li data-jstree='{"icon":"bi bi-geo-alt"}' id="groups_node_measurements_20m_coordinates">
+                                        <span class="text-secondary">Coordinates</span>
+                                        <ul>
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li data-jstree='{"icon":"bi bi-info-square"}' id="groups_node_measurements_20m_attributes">
+                                        <span class="text-secondary">Attributes</span>
+                                        <ul>
+                                            
+                                                <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_20m_attributes_description">
+                                                    
+                                                    <span class="text-secondary">description : </span>
+                                                    <span class="m-5 text-muted">measurements_20m Data Group</span>
+                                                </li>
+                                            
+                                            
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li data-jstree='{"icon":"bi bi-folder"}' id="groups_node_measurements_20m_variables">
+                                        <span class="text-capitalize text-secondary">variables</span>
+                                        <ul>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_measurements_20m_B05">
+                                                    <span class="text-secondary">B05( y_20m,x_20m )  : uint16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_20m_B05_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_20m_B05_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_measurements_20m_B06">
+                                                    <span class="text-secondary">B06( y_20m,x_20m )  : uint16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_20m_B06_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_20m_B06_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_measurements_20m_B07">
+                                                    <span class="text-secondary">B07( y_20m,x_20m )  : uint16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_20m_B07_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_20m_B07_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_measurements_20m_B8A">
+                                                    <span class="text-secondary">B8A( y_20m,x_20m )  : uint16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_20m_B8A_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_20m_B8A_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_measurements_20m_B11">
+                                                    <span class="text-secondary">B11( y_20m,x_20m )  : uint16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_20m_B11_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_20m_B11_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_measurements_20m_B12">
+                                                    <span class="text-secondary">B12( y_20m,x_20m )  : uint16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_20m_B12_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_20m_B12_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        
+                            <li data-jstree='{"icon":"bi bi-diagram-2-fill"}' id="groups_node_measurements_60m">
+                                <span class="text-capitalize text-secondary fw-bold">measurements_60m</span>
+                                <ul>
+                                    <li data-jstree='{"icon":"bi bi-box"}' id="groups_node_measurements_60m_dimensions">
+                                        <span class="text-secondary">Dimensions( y_60m,x_60m )</span>
+                                    </li>
+                                    <li data-jstree='{"icon":"bi bi-geo-alt"}' id="groups_node_measurements_60m_coordinates">
+                                        <span class="text-secondary">Coordinates</span>
+                                        <ul>
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li data-jstree='{"icon":"bi bi-info-square"}' id="groups_node_measurements_60m_attributes">
+                                        <span class="text-secondary">Attributes</span>
+                                        <ul>
+                                            
+                                                <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_60m_attributes_description">
+                                                    
+                                                    <span class="text-secondary">description : </span>
+                                                    <span class="m-5 text-muted">measurements_60m Data Group</span>
+                                                </li>
+                                            
+                                            
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li data-jstree='{"icon":"bi bi-folder"}' id="groups_node_measurements_60m_variables">
+                                        <span class="text-capitalize text-secondary">variables</span>
+                                        <ul>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_measurements_60m_B01">
+                                                    <span class="text-secondary">B01( y_60m,x_60m )  : uint16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_60m_B01_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_60m_B01_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_measurements_60m_B09">
+                                                    <span class="text-secondary">B09( y_60m,x_60m )  : uint16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_60m_B09_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_60m_B09_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_measurements_60m_B10">
+                                                    <span class="text-secondary">B10( y_60m,x_60m )  : uint16</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_60m_B10_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_measurements_60m_B10_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        
+                            <li data-jstree='{"icon":"bi bi-diagram-2-fill"}' id="groups_node_quicklook_tci">
+                                <span class="text-capitalize text-secondary fw-bold">quicklook_tci</span>
+                                <ul>
+                                    <li data-jstree='{"icon":"bi bi-box"}' id="groups_node_quicklook_tci_dimensions">
+                                        <span class="text-secondary">Dimensions( y_10m,x_10m )</span>
+                                    </li>
+                                    <li data-jstree='{"icon":"bi bi-geo-alt"}' id="groups_node_quicklook_tci_coordinates">
+                                        <span class="text-secondary">Coordinates</span>
+                                        <ul>
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li data-jstree='{"icon":"bi bi-info-square"}' id="groups_node_quicklook_tci_attributes">
+                                        <span class="text-secondary">Attributes</span>
+                                        <ul>
+                                            
+                                                <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_quicklook_tci_attributes_description">
+                                                    
+                                                    <span class="text-secondary">description : </span>
+                                                    <span class="m-5 text-muted">quicklook_tci Data Group</span>
+                                                </li>
+                                            
+                                            
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li data-jstree='{"icon":"bi bi-folder"}' id="groups_node_quicklook_tci_variables">
+                                        <span class="text-capitalize text-secondary">variables</span>
+                                        <ul>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_quicklook_tci_red">
+                                                    <span class="text-secondary">red( y_10m,x_10m )  : uint8</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_quicklook_tci_red_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_quicklook_tci_red_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_quicklook_tci_green">
+                                                    <span class="text-secondary">green( y_10m,x_10m )  : uint8</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_quicklook_tci_green_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_quicklook_tci_green_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_quicklook_tci_blue">
+                                                    <span class="text-secondary">blue( y_10m,x_10m )  : uint8</span>
+                                                    <ul>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_quicklook_tci_blue_scale_factor">
+                                                                <span class="text-secondary">scale_factor : </span>
+                                                                <span class="m-5 text-muted">1.0</span>
+                                                            </li>
+                                                        
+
+                                                            <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_quicklook_tci_blue_add_offset">
+                                                                <span class="text-secondary">add_offset : </span>
+                                                                <span class="m-5 text-muted">0.0</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        
+                            <li data-jstree='{"icon":"bi bi-diagram-2-fill"}' id="groups_node_geometry">
+                                <span class="text-capitalize text-secondary fw-bold">geometry</span>
+                                <ul>
+                                    <li data-jstree='{"icon":"bi bi-box"}' id="groups_node_geometry_dimensions">
+                                        <span class="text-secondary">Dimensions( y_tiepoints,x_tiepoints )</span>
+                                    </li>
+                                    <li data-jstree='{"icon":"bi bi-geo-alt"}' id="groups_node_geometry_coordinates">
+                                        <span class="text-secondary">Coordinates</span>
+                                        <ul>
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li data-jstree='{"icon":"bi bi-info-square"}' id="groups_node_geometry_attributes">
+                                        <span class="text-secondary">Attributes</span>
+                                        <ul>
+                                            
+                                                <li data-jstree='{"icon":"bi bi-info"}' id="groups_node_geometry_attributes_description">
+                                                    
+                                                    <span class="text-secondary">description : </span>
+                                                    <span class="m-5 text-muted">geometry Data Group</span>
+                                                </li>
+                                            
+                                            
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li data-jstree='{"icon":"bi bi-folder"}' id="groups_node_geometry_variables">
+                                        <span class="text-capitalize text-secondary">variables</span>
+                                        <ul>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_sza">
+                                                    <span class="text-secondary">sza( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_saa">
+                                                    <span class="text-secondary">saa( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B01_1">
+                                                    <span class="text-secondary">vza_B01_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B01_1">
+                                                    <span class="text-secondary">vaa_B01_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B01_2">
+                                                    <span class="text-secondary">vza_B01_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B01_2">
+                                                    <span class="text-secondary">vaa_B01_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B01_3">
+                                                    <span class="text-secondary">vza_B01_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B01_3">
+                                                    <span class="text-secondary">vaa_B01_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B01_4">
+                                                    <span class="text-secondary">vza_B01_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B01_4">
+                                                    <span class="text-secondary">vaa_B01_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B01_5">
+                                                    <span class="text-secondary">vza_B01_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B01_5">
+                                                    <span class="text-secondary">vaa_B01_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B01_6">
+                                                    <span class="text-secondary">vza_B01_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B01_6">
+                                                    <span class="text-secondary">vaa_B01_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B02_1">
+                                                    <span class="text-secondary">vza_B02_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B02_1">
+                                                    <span class="text-secondary">vaa_B02_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B02_2">
+                                                    <span class="text-secondary">vza_B02_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B02_2">
+                                                    <span class="text-secondary">vaa_B02_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B02_3">
+                                                    <span class="text-secondary">vza_B02_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B02_3">
+                                                    <span class="text-secondary">vaa_B02_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B02_4">
+                                                    <span class="text-secondary">vza_B02_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B02_4">
+                                                    <span class="text-secondary">vaa_B02_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B02_5">
+                                                    <span class="text-secondary">vza_B02_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B02_5">
+                                                    <span class="text-secondary">vaa_B02_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B02_6">
+                                                    <span class="text-secondary">vza_B02_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B02_6">
+                                                    <span class="text-secondary">vaa_B02_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B03_1">
+                                                    <span class="text-secondary">vza_B03_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B03_1">
+                                                    <span class="text-secondary">vaa_B03_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B03_2">
+                                                    <span class="text-secondary">vza_B03_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B03_2">
+                                                    <span class="text-secondary">vaa_B03_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B03_3">
+                                                    <span class="text-secondary">vza_B03_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B03_3">
+                                                    <span class="text-secondary">vaa_B03_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B03_4">
+                                                    <span class="text-secondary">vza_B03_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B03_4">
+                                                    <span class="text-secondary">vaa_B03_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B03_5">
+                                                    <span class="text-secondary">vza_B03_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B03_5">
+                                                    <span class="text-secondary">vaa_B03_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B03_6">
+                                                    <span class="text-secondary">vza_B03_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B03_6">
+                                                    <span class="text-secondary">vaa_B03_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B04_1">
+                                                    <span class="text-secondary">vza_B04_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B04_1">
+                                                    <span class="text-secondary">vaa_B04_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B04_2">
+                                                    <span class="text-secondary">vza_B04_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B04_2">
+                                                    <span class="text-secondary">vaa_B04_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B04_3">
+                                                    <span class="text-secondary">vza_B04_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B04_3">
+                                                    <span class="text-secondary">vaa_B04_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B04_4">
+                                                    <span class="text-secondary">vza_B04_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B04_4">
+                                                    <span class="text-secondary">vaa_B04_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B04_5">
+                                                    <span class="text-secondary">vza_B04_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B04_5">
+                                                    <span class="text-secondary">vaa_B04_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B04_6">
+                                                    <span class="text-secondary">vza_B04_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B04_6">
+                                                    <span class="text-secondary">vaa_B04_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B05_1">
+                                                    <span class="text-secondary">vza_B05_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B05_1">
+                                                    <span class="text-secondary">vaa_B05_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B05_2">
+                                                    <span class="text-secondary">vza_B05_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B05_2">
+                                                    <span class="text-secondary">vaa_B05_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B05_3">
+                                                    <span class="text-secondary">vza_B05_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B05_3">
+                                                    <span class="text-secondary">vaa_B05_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B05_4">
+                                                    <span class="text-secondary">vza_B05_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B05_4">
+                                                    <span class="text-secondary">vaa_B05_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B05_5">
+                                                    <span class="text-secondary">vza_B05_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B05_5">
+                                                    <span class="text-secondary">vaa_B05_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B05_6">
+                                                    <span class="text-secondary">vza_B05_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B05_6">
+                                                    <span class="text-secondary">vaa_B05_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B06_1">
+                                                    <span class="text-secondary">vza_B06_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B06_1">
+                                                    <span class="text-secondary">vaa_B06_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B06_2">
+                                                    <span class="text-secondary">vza_B06_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B06_2">
+                                                    <span class="text-secondary">vaa_B06_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B06_3">
+                                                    <span class="text-secondary">vza_B06_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B06_3">
+                                                    <span class="text-secondary">vaa_B06_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B06_4">
+                                                    <span class="text-secondary">vza_B06_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B06_4">
+                                                    <span class="text-secondary">vaa_B06_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B06_5">
+                                                    <span class="text-secondary">vza_B06_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B06_5">
+                                                    <span class="text-secondary">vaa_B06_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B06_6">
+                                                    <span class="text-secondary">vza_B06_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B06_6">
+                                                    <span class="text-secondary">vaa_B06_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B07_1">
+                                                    <span class="text-secondary">vza_B07_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B07_1">
+                                                    <span class="text-secondary">vaa_B07_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B07_2">
+                                                    <span class="text-secondary">vza_B07_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B07_2">
+                                                    <span class="text-secondary">vaa_B07_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B07_3">
+                                                    <span class="text-secondary">vza_B07_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B07_3">
+                                                    <span class="text-secondary">vaa_B07_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B07_4">
+                                                    <span class="text-secondary">vza_B07_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B07_4">
+                                                    <span class="text-secondary">vaa_B07_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B07_5">
+                                                    <span class="text-secondary">vza_B07_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B07_5">
+                                                    <span class="text-secondary">vaa_B07_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B07_6">
+                                                    <span class="text-secondary">vza_B07_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B07_6">
+                                                    <span class="text-secondary">vaa_B07_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B08_1">
+                                                    <span class="text-secondary">vza_B08_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B08_1">
+                                                    <span class="text-secondary">vaa_B08_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B08_2">
+                                                    <span class="text-secondary">vza_B08_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B08_2">
+                                                    <span class="text-secondary">vaa_B08_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B08_3">
+                                                    <span class="text-secondary">vza_B08_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B08_3">
+                                                    <span class="text-secondary">vaa_B08_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B08_4">
+                                                    <span class="text-secondary">vza_B08_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B08_4">
+                                                    <span class="text-secondary">vaa_B08_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B08_5">
+                                                    <span class="text-secondary">vza_B08_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B08_5">
+                                                    <span class="text-secondary">vaa_B08_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B08_6">
+                                                    <span class="text-secondary">vza_B08_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B08_6">
+                                                    <span class="text-secondary">vaa_B08_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B8A_1">
+                                                    <span class="text-secondary">vza_B8A_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B8A_1">
+                                                    <span class="text-secondary">vaa_B8A_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B8A_2">
+                                                    <span class="text-secondary">vza_B8A_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B8A_2">
+                                                    <span class="text-secondary">vaa_B8A_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B8A_3">
+                                                    <span class="text-secondary">vza_B8A_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B8A_3">
+                                                    <span class="text-secondary">vaa_B8A_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B8A_4">
+                                                    <span class="text-secondary">vza_B8A_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B8A_4">
+                                                    <span class="text-secondary">vaa_B8A_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B8A_5">
+                                                    <span class="text-secondary">vza_B8A_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B8A_5">
+                                                    <span class="text-secondary">vaa_B8A_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B8A_6">
+                                                    <span class="text-secondary">vza_B8A_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B8A_6">
+                                                    <span class="text-secondary">vaa_B8A_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B09_1">
+                                                    <span class="text-secondary">vza_B09_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B09_1">
+                                                    <span class="text-secondary">vaa_B09_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B09_2">
+                                                    <span class="text-secondary">vza_B09_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B09_2">
+                                                    <span class="text-secondary">vaa_B09_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B09_3">
+                                                    <span class="text-secondary">vza_B09_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B09_3">
+                                                    <span class="text-secondary">vaa_B09_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B09_4">
+                                                    <span class="text-secondary">vza_B09_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B09_4">
+                                                    <span class="text-secondary">vaa_B09_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B09_5">
+                                                    <span class="text-secondary">vza_B09_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B09_5">
+                                                    <span class="text-secondary">vaa_B09_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B09_6">
+                                                    <span class="text-secondary">vza_B09_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B09_6">
+                                                    <span class="text-secondary">vaa_B09_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B10_1">
+                                                    <span class="text-secondary">vza_B10_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B10_1">
+                                                    <span class="text-secondary">vaa_B10_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B10_2">
+                                                    <span class="text-secondary">vza_B10_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B10_2">
+                                                    <span class="text-secondary">vaa_B10_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B10_3">
+                                                    <span class="text-secondary">vza_B10_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B10_3">
+                                                    <span class="text-secondary">vaa_B10_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B10_4">
+                                                    <span class="text-secondary">vza_B10_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B10_4">
+                                                    <span class="text-secondary">vaa_B10_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B10_5">
+                                                    <span class="text-secondary">vza_B10_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B10_5">
+                                                    <span class="text-secondary">vaa_B10_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B10_6">
+                                                    <span class="text-secondary">vza_B10_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B10_6">
+                                                    <span class="text-secondary">vaa_B10_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B11_1">
+                                                    <span class="text-secondary">vza_B11_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B11_1">
+                                                    <span class="text-secondary">vaa_B11_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B11_2">
+                                                    <span class="text-secondary">vza_B11_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B11_2">
+                                                    <span class="text-secondary">vaa_B11_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B11_3">
+                                                    <span class="text-secondary">vza_B11_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B11_3">
+                                                    <span class="text-secondary">vaa_B11_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B11_4">
+                                                    <span class="text-secondary">vza_B11_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B11_4">
+                                                    <span class="text-secondary">vaa_B11_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B11_5">
+                                                    <span class="text-secondary">vza_B11_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B11_5">
+                                                    <span class="text-secondary">vaa_B11_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B11_6">
+                                                    <span class="text-secondary">vza_B11_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B11_6">
+                                                    <span class="text-secondary">vaa_B11_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B12_1">
+                                                    <span class="text-secondary">vza_B12_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B12_1">
+                                                    <span class="text-secondary">vaa_B12_1( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B12_2">
+                                                    <span class="text-secondary">vza_B12_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B12_2">
+                                                    <span class="text-secondary">vaa_B12_2( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B12_3">
+                                                    <span class="text-secondary">vza_B12_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B12_3">
+                                                    <span class="text-secondary">vaa_B12_3( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B12_4">
+                                                    <span class="text-secondary">vza_B12_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B12_4">
+                                                    <span class="text-secondary">vaa_B12_4( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B12_5">
+                                                    <span class="text-secondary">vza_B12_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B12_5">
+                                                    <span class="text-secondary">vaa_B12_5( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vza_B12_6">
+                                                    <span class="text-secondary">vza_B12_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+                                                <li class="text-secondary" data-jstree='{"icon":"bi bi-clipboard-data"}' id="groups_node_geometry_vaa_B12_6">
+                                                    <span class="text-secondary">vaa_B12_6( y_tiepoints,x_tiepoints )  : float64</span>
+                                                    <ul>
+                                                        
+                                                    </ul>
+
+                                                </li>
+                                            
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        
+                    </ul>
+
+                    <ul>
+                        <li data-jstree='{"icon":"bi bi-link-45deg"}' id="metadata_node">
+                            <span class="text-capitalize text-secondary fw-bold">Metadata</span>
+
+                            <ul>
+                                
+                                <li data-jstree='{"icon":"bi bi-diagram-5"}' id="metadata_node_MTD_MSIL1C.xml"> MTD_MSIL1C.xml</li>
+                                
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+        </div>
+
+
+    </div>
+
+    <!-- 4 include the jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <!-- 5 include the minified jstree source -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            // 6 create an instance when the DOM is ready
+            $('#jstree').jstree();
+            // 7 bind to events triggered on the tree
+            $('#jstree').on("changed.jstree", function (e, data) {
+                console.log(data.selected);
+            });
+            // 8 interact with the tree - either way is OK
+            // $('button').on('click', function () 
+            // {
+            //   $('#jstree').jstree(true).select_node('groups_node');
+            //   $('#jstree').jstree('select_node', 'groups_node');
+            //   $.jstree.reference('#jstree').select_node('groups_node');
+            // });
+        });
+    </script>
+</body>
+
+</html>

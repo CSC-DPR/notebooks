@@ -1,0 +1,40 @@
+{% if group.groups %}
+    <li data-jstree='{"icon":"bi {{ icon }}"}' id="groups_node_{{ group.name }}">
+        <span class="text-capitalize text-secondary fw-bold">{{ group.name }}</span>
+        {% for group in group.groups.values() %}
+            {% with group=group, icon="bi-diagram-2-fill" %}
+                {% include "group.html" %}
+            {% endwith %}
+        {% endfor %}
+    </li>
+{% else %}
+    <li data-jstree='{"icon":"bi {{ icon }}"}' id="groups_node_{{ group.name }}">
+    <span class="text-capitalize text-secondary fw-bold">{{ group.name }}</span>
+    <ul>
+        <li data-jstree='{"icon":"bi bi-box"}' id="groups_node_{{ group.name }}_dimensions">
+            <span class="text-secondary">Dimensions( {{ ",".join(group.dims) }} )</span>
+        </li>
+
+        {% if group.coords %}
+            {% with group=group.coords, icon="bi-geo-alt" %}
+                {% include "group.html" %}
+            {% endwith %}
+        {% endif %}
+        {% with attrs=group.attrs, container=True %}
+            {% include "attrs.html" %}
+        {% endwith %}}
+
+        <li data-jstree='{"icon":"bi bi-folder"}' id="groups_node_{{ group.name }}_variables">
+            <span class="text-capitalize text-secondary">variables</span>
+            <ul>
+                {% for variable in group %}
+                    {% with variable=variable %}
+                        {% include "variable.html" %}
+                    {% endwith %}
+                {% endfor %}
+
+            </ul>
+        </li>
+    </ul>
+    </li>
+{% endif %}
