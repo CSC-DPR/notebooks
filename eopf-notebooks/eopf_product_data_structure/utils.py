@@ -1,16 +1,8 @@
 import os
 import glob
 import xarray as xr
-from IPython.display import IFrame
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
-
-
-def display(eoproduct):
-    html = renderer(eoproduct)
-    with open('tmp.html','w') as f:
-        f.write(html)
-    return IFrame(src='tmp.html', width=300, height=450)
 
 
 # With this function we will be able to explore and get all variables from a given netcdf files of the product
